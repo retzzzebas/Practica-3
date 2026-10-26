@@ -32,3 +32,24 @@ false: a y c son direcciones diferentes en la memoria.
 
 **El esquema esta en una foto del repositorio, el archivo se llama: "SchRefsShared.png"**
 
+6.- Eliminar caracteres duplicados
+Para detectar caracteres repetidos, se utiliza el metodo resultado.indexOf(charString), el cual busca el caracter dentro del StringBuilder. Si devuelve -1, es que no ha aparecido el caracter y se le agrega con el metodo .append(). Si hay un caracter repetido, devuelve cualquier otro numero e ignora el duplicado
+En si, el metodo .indexof() realiza varias busquedas sobre el StringBuilder, es decir, revisa los elementos uno por uno, pero este metodo esta dentro de un solo for, por lo que la solucion solo hace 1 recorrido.
+
+10.- Editor de texto: clases y visibilidad
+
+1. ¿Por qué los atributos del editor deben ser privados?
+R: Para que cumplan con el encapsulamiento, y asi se evita que otras clases modifiquen las cadenas de texto
+
+2. ¿Qué diferencia hay entre un método public y uno private?
+R: Si un metodo es public, entonces se puede acceder a el desde cualquier otra clase.
+Si es private, entonces solo es accesible dentro de la misma clase en la que fue declarado.
+
+3. Si quitas public de un método, ¿qué acceso tiene y puede llamarlo PruebaEditor desde el mismo
+paquete?
+R: Si se quita el public, Java lo que hace es cambiar al acceso por defecto (package-private). 
+Si, PruebaEditor puede llamarlo ya que este nivel de acceso permite que coexista dentro del mismo paquete
+
+4. ¿En qué se diferencia el acceso de paquete de protected?
+R: El acceso de paquete (package-private) solo permite la visibilidad a clases dentro del mismo paquete.
+protected permite el acceso a otras clases del mismo paquete y a cualquier subclase en otros paquetes a traves de la herencia.
